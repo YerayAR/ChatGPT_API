@@ -16,3 +16,7 @@ npm start
 ```
 
 Abre `http://localhost:3000` en el navegador para acceder a la interfaz.
+
+## Notas de lanzamiento
+
+Para detalles de cambios y características incluidas en la versión 1.0.0, consulta `CHANGELOG.md`.
