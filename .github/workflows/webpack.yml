@@ -1,4 +1,6 @@
 name: NodeJS with Webpack
+# Este workflow compila el proyecto usando Webpack en
+# varias versiones de Node.js cuando se realizan cambios
 
 on:
   push:
@@ -8,10 +10,12 @@ on:
 
 jobs:
   build:
+    # El job se ejecuta en la última versión estable de Ubuntu
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
+        # Se prueba la build en distintas versiones de Node
         node-version: [18.x, 20.x, 22.x]
 
     steps:
@@ -24,5 +28,6 @@ jobs:
 
     - name: Build
       run: |
+        # Instalación de dependencias y compilación mediante Webpack
         npm install
         npx webpack

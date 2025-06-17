@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Página HTML que actúa como interfaz mínima para el usuario -->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -12,24 +13,33 @@
   </style>
 </head>
 <body>
+  <!-- Área principal de conversación -->
   <h1>Interfaz ChatGPT</h1>
   <div id="chat"></div>
   <input id="message" placeholder="Escribe tu mensaje" style="width:80%">
   <button id="send">Enviar</button>
+  <!-- Parámetros ajustables para la llamada a la API -->
   <div id="params">
     <label>Temperature: <input id="temperature" type="number" step="0.1" min="0" max="2" value="0.7"></label>
     <label>Max tokens: <input id="max_tokens" type="number" value="150"></label>
   </div>
   <script>
+  /**
+   * Envía el mensaje del usuario al servidor y muestra la respuesta de
+   * ChatGPT en la interfaz.
+   */
   async function sendMessage() {
+    // Se recoge el mensaje de la caja de texto y se limpia el campo
     const msg = document.getElementById('message').value;
     document.getElementById('message').value = '';
     appendMsg('Usuario', msg);
 
+    // Parámetros que el usuario puede ajustar de forma opcional
     const params = {
       temperature: parseFloat(document.getElementById('temperature').value),
       max_tokens: parseInt(document.getElementById('max_tokens').value, 10)
     };
+    // Se realiza una petición POST al endpoint del servidor
     const res = await fetch('/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -39,10 +49,14 @@
       })
     });
     const data = await res.json();
+    // Extraemos la respuesta del primer mensaje devuelto por la API
     const reply = data.choices && data.choices[0].message.content;
     if (reply) appendMsg('ChatGPT', reply);
   }
 
+  /**
+   * Agrega un mensaje a la ventana de chat identificando su rol.
+   */
   function appendMsg(role, text) {
     const div = document.createElement('div');
     div.className = 'msg';
@@ -50,6 +64,7 @@
     document.getElementById('chat').appendChild(div);
   }
 
+  // Asociamos el botón "Enviar" a la función anterior
   document.getElementById('send').addEventListener('click', sendMessage);
   </script>
 </body>
