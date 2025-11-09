@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romen | DJ & Producer</title>
+    <meta
+      name="description"
+      content="Página personal del DJ y productor Romen. Escucha mixes, descubre próximas fechas y reserva shows exclusivos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="inicio">
+      <nav class="nav">
+        <a class="logo" href="#inicio" aria-label="Ir al inicio">Romen</a>
+        <button class="nav__toggle" type="button" aria-label="Abrir menú">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <ul class="nav__links" aria-label="Navegación principal">
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#sonidos">Sonidos</a></li>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <p class="hero__tag">DJ · Productor · Selector</p>
+        <h1 class="hero__title">Ritmos nocturnos, vibras brillantes.</h1>
+        <p class="hero__subtitle">
+          Romen mezcla sonidos house, techno melódico y ritmos latinos para crear un viaje
+          multicolor que enciende la pista. Disponible para clubes, festivales y eventos
+          privados.
+        </p>
+        <div class="hero__cta">
+          <a class="button button--primary" href="#contacto">Reserva un show</a>
+          <a class="button button--ghost" href="#sonidos">Escucha un mix</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__orb orb--1"></div>
+        <div class="hero__orb orb--2"></div>
+        <div class="hero__orb orb--3"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section agenda" id="agenda">
+        <div class="section__header">
+          <h2>Agenda</h2>
+          <p>Próximas fechas confirmadas. Actualización semanal.</p>
+        </div>
+        <div class="agenda__filters" role="group" aria-label="Filtros de agenda">
+          <button class="chip chip--active" data-filter="all">Todas</button>
+          <button class="chip" data-filter="club">Club</button>
+          <button class="chip" data-filter="festival">Festival</button>
+          <button class="chip" data-filter="privado">Privado</button>
+        </div>
+        <div class="agenda__list" id="agenda-list" role="list"></div>
+      </section>
+
+      <section class="section sonidos" id="sonidos">
+        <div class="section__header">
+          <h2>Sonidos</h2>
+          <p>
+            Mezclas exclusivas grabadas en directo. Escucha y guarda tus favoritas en tu
+            plataforma preferida.
+          </p>
+        </div>
+        <div class="sonidos__grid" role="list">
+          <article class="card" role="listitem">
+            <div class="card__header">
+              <h3>Sunset Frequencies</h3>
+              <span class="card__tag">Deep House</span>
+            </div>
+            <p>Melodías cálidas, percusiones suaves y voces atmosféricas para atardeceres.
+            </p>
+            <div class="card__actions">
+              <a class="button button--ghost" href="https://soundcloud.com" target="_blank" rel="noreferrer">
+                SoundCloud
+              </a>
+              <a class="button button--ghost" href="https://mixcloud.com" target="_blank" rel="noreferrer">
+                Mixcloud
+              </a>
+            </div>
+          </article>
+          <article class="card" role="listitem">
+            <div class="card__header">
+              <h3>Neon Pulse</h3>
+              <span class="card__tag">Techno Melódico</span>
+            </div>
+            <p>Energía intensa y bajos poderosos diseñados para clubes hasta el amanecer.</p>
+            <div class="card__actions">
+              <a class="button button--ghost" href="https://spotify.com" target="_blank" rel="noreferrer">
+                Spotify
+              </a>
+              <a class="button button--ghost" href="https://apple.com/music" target="_blank" rel="noreferrer">
+                Apple Music
+              </a>
+            </div>
+          </article>
+          <article class="card" role="listitem">
+            <div class="card__header">
+              <h3>Midnight Tropics</h3>
+              <span class="card__tag">Organic House</span>
+            </div>
+            <p>Ritmos tropicales y texturas electrónicas que iluminan cualquier noche.</p>
+            <div class="card__actions">
+              <a class="button button--ghost" href="https://youtube.com" target="_blank" rel="noreferrer">
+                YouTube
+              </a>
+              <a class="button button--ghost" href="https://bandcamp.com" target="_blank" rel="noreferrer">
+                Bandcamp
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section bio" id="bio">
+        <div class="section__header">
+          <h2>Bio</h2>
+        </div>
+        <div class="bio__content">
+          <p>
+            Crecido entre vinilos familiares y la escena underground de Barcelona, Romen se
+            formó como selector con una obsesión por los matices. Sus sets buscan la historia y
+            la emoción tanto como la pista de baile, mezclando texturas orgánicas con
+            sintetizadores brillantes.
+          </p>
+          <p>
+            Ha compartido cartel con referentes del house progresivo en Europa y Latinoamérica,
+            y actualmente produce un podcast mensual donde invita a nuevos talentos. Su visión:
+            crear espacios seguros y vibrantes donde la comunidad pueda bailar sin etiquetas.
+          </p>
+          <ul class="bio__stats">
+            <li>
+              <span class="bio__stats-number">120+</span>
+              <span class="bio__stats-label">Shows anuales</span>
+            </li>
+            <li>
+              <span class="bio__stats-number">15</span>
+              <span class="bio__stats-label">Años mezclando</span>
+            </li>
+            <li>
+              <span class="bio__stats-number">8</span>
+              <span class="bio__stats-label">Países visitados</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section contacto" id="contacto">
+        <div class="section__header">
+          <h2>Contacto</h2>
+          <p>Cuéntame sobre tu evento y recibirás respuesta en menos de 24 horas.</p>
+        </div>
+        <form class="form" id="booking-form" novalidate>
+          <div class="form__group">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+            <span class="form__error" id="error-name" role="alert"></span>
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="tu@email.com"
+              required
+              inputmode="email"
+            />
+            <span class="form__error" id="error-email" role="alert"></span>
+          </div>
+          <div class="form__group">
+            <label for="event-type">Tipo de evento</label>
+            <select id="event-type" name="eventType" required>
+              <option value="">Selecciona una opción</option>
+              <option value="club">Club</option>
+              <option value="festival">Festival</option>
+              <option value="privado">Privado</option>
+              <option value="corporativo">Corporativo</option>
+            </select>
+            <span class="form__error" id="error-event-type" role="alert"></span>
+          </div>
+          <div class="form__group">
+            <label for="message">Detalles</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Cuéntame sobre el lugar, horarios y expectativas."
+              required
+            ></textarea>
+            <span class="form__error" id="error-message" role="alert"></span>
+          </div>
+          <button class="button button--primary" type="submit">Enviar solicitud</button>
+          <p class="form__success" id="form-success" role="status" aria-live="polite"></p>
+        </form>
+        <div class="contacto__extras">
+          <a class="contacto__social" href="https://instagram.com" target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          <a class="contacto__social" href="https://tiktok.com" target="_blank" rel="noreferrer">
+            TikTok
+          </a>
+          <a class="contacto__social" href="mailto:bookings@romen.dj">bookings@romen.dj</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="current-year"></span> Romen. Todos los derechos reservados.</small>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+  </body>
+</html>
