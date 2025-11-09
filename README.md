@@ -1,22 +1,38 @@
-# ChatGPT_API
-ChatGPT API Interface is a customizable platform designed for seamless interaction with OpenAI's ChatGPT API. It offers advanced configuration options, adjustable parameters, and a user-friendly interface for enhanced AI-driven conversations.
+# Romen · DJ & Producer
 
-## Instalación
+Landing page minimalista y colorida para el DJ Romen, lista para desplegar en Vercel como un sitio estático.
 
-```bash
-npm install
-```
+## Estructura
 
-Configura una variable de entorno `OPENAI_API_KEY` con tu clave de la API y, opcionalmente, edita `config.json` para ajustar los parámetros por defecto.
+- `index.html`: documento principal con todas las secciones (hero, agenda, sonidos, bio y contacto).
+- `styles.css`: estilos globales con tipografías, degradados y layout responsive.
+- `scripts/main.js`: lógica ligera para navegación, filtros de agenda y validación del formulario.
 
-## Uso
+## Desarrollo local
 
-```bash
-npm start
-```
+1. Instala dependencias de desarrollo opcionales si deseas un servidor local:
 
-Abre `http://localhost:3000` en el navegador para acceder a la interfaz.
+   ```bash
+   npm install --global serve
+   ```
 
-## Notas de lanzamiento
+2. Inicia un servidor estático desde la raíz del proyecto:
 
-Para detalles de cambios y características incluidas en la versión 1.0.0, consulta `CHANGELOG.md`.
+   ```bash
+   serve .
+   ```
+
+3. Abre `http://localhost:3000` (o el puerto indicado en consola).
+
+## Despliegue en Vercel
+
+1. Inicia sesión en Vercel y crea un nuevo proyecto enlazado a este repositorio.
+2. Selecciona el framework "Otros" para desplegar como sitio estático.
+3. Establece la carpeta pública como la raíz del repositorio (`.`).
+4. Despliega y obtén la URL generada por Vercel.
+
+## Personalización
+
+- Actualiza el contenido de la agenda en `scripts/main.js` modificando `agendaData`.
+- Reemplaza enlaces de mixes por URLs reales en la sección **Sonidos** de `index.html`.
+- Ajusta colores editando las variables CSS definidas al inicio de `styles.css`.
