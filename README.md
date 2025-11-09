@@ -28,8 +28,10 @@ Landing page minimalista y colorida para el DJ Romen, lista para desplegar en Ve
 
 1. Inicia sesión en Vercel y crea un nuevo proyecto enlazado a este repositorio.
 2. Selecciona el framework "Otros" para desplegar como sitio estático.
-3. Establece la carpeta pública como la raíz del repositorio (`.`).
-4. Despliega y obtén la URL generada por Vercel.
+codex/create-personal-page-for-dj-romen-28owjm
+3. Mantén el comando de build vacío (no es necesario) y deja la carpeta pública como la raíz del repositorio (`.`).
+4. Verifica que la detección automática muestre "Static" como tipo de proyecto. Gracias al archivo `vercel.json` incluido, Vercel servirá `index.html`, `styles.css` y `scripts/main.js` directamente.
+5. Despliega y obtén la URL generada por Vercel.
 
 ## Personalización
 
